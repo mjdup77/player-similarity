@@ -59,7 +59,7 @@ export default function SearchBar({ players, onSelect, placeholder = 'Search by 
             onFocus={() => setIsOpen(true)}
             onKeyDown={handleKeyDown}
             placeholder={placeholder}
-            className="w-full pl-13 pr-5 py-4 glass rounded-2xl text-white placeholder:text-slate-500 outline-none transition-all duration-300 text-[14px] focus:shadow-lg focus:shadow-violet-500/5"
+            className="w-full pl-[52px] pr-5 py-4 glass rounded-2xl text-white placeholder:text-slate-500 outline-none transition-all duration-300 text-[14px] focus:shadow-lg focus:shadow-violet-500/5"
           />
         </div>
       </div>

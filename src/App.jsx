@@ -52,16 +52,16 @@ export default function App() {
         {!selectedPlayer ? (
           /* ------- HOME ------- */
           <div className="max-w-4xl mx-auto px-6 pt-20">
-            <div className="text-center mb-14 animate-fade-in-up">
+            <div className="flex flex-col items-center mb-14 animate-fade-in-up">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-500/[0.07] border border-violet-500/[0.12] text-[11px] text-violet-400 font-semibold tracking-wider uppercase mb-8">
                 <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse-glow" />
                 Cosine similarity across per-90 stats
               </div>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-[-0.03em] text-white mb-6 leading-[1.05]">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-[-0.03em] text-white mb-6 leading-[1.05] text-center">
                 Find Similar<br />
                 <span className="text-gradient-violet">Players</span>
               </h1>
-              <p className="text-slate-400 max-w-lg mx-auto text-base leading-relaxed">
+              <p className="text-slate-400 max-w-lg text-center text-base leading-relaxed">
                 Select any player to discover statistically similar profiles
                 across Europe's top leagues. Radar charts, percentile rankings, and scouting filters.
               </p>
@@ -105,7 +105,7 @@ export default function App() {
                       {POSITIONS[selectedPlayer.position]}
                     </span>
                   </div>
-                  <div className="flex items-center gap-3 text-[13px] text-slate-400 mb-6 flex-wrap">
+                  <div className="flex items-center flex-wrap gap-x-3 gap-y-1 text-[13px] text-slate-400 mb-6">
                     {[
                       selectedPlayer.team,
                       LEAGUES[selectedPlayer.league],
@@ -114,7 +114,7 @@ export default function App() {
                       `€${selectedPlayer.marketValue}m`,
                     ].map((item, i) => (
                       <span key={i} className="flex items-center gap-3">
-                        {i > 0 && <span className="w-1 h-1 rounded-full bg-slate-700" />}
+                        {i > 0 && <span className="w-1 h-1 rounded-full bg-slate-700 shrink-0" />}
                         {item}
                       </span>
                     ))}
